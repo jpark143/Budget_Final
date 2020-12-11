@@ -1,0 +1,15 @@
+body {
+  font-size: 12px;
+}
+
+.toolbar {
+  width: 100%;
+  background-color: aquamarine;
+  height: 40px;
+  padding: 0 40px;
+}
+
+.toolbar ul,
+li {
+  display: inline-block;
+}
