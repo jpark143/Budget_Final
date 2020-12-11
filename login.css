@@ -3,7 +3,39 @@
 body {
   padding: 0;
   background: url(ny.jpg) no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   background-size: cover;
+  font-family: Arial;
+}
+
+.nav_tool li,
+a {
+  font-family: Arial;
+  font-size: 15px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.nav_tool {
+  list-style: none;
+}
+
+.nav_tool li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.nav_tool li a:hover {
+  color: black;
+  background-color: #edf0f1;
 }
 
 .login-section {

@@ -1,15 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-size: 12px;
+  font-size: 10px;
+  font-family: Arial;
+  background: url(ny.jpg) no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
-.toolbar {
-  width: 100%;
-  background-color: aquamarine;
-  height: 40px;
-  padding: 0 40px;
+.nav_tool li,
+a {
+  font-family: Arial;
+  font-size: 15px;
+  color: #edf0f1;
+  text-decoration: none;
 }
 
-.toolbar ul,
-li {
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.nav_tool {
+  list-style: none;
+}
+
+.nav_tool li {
   display: inline-block;
+  padding: 0 10px;
+}
+
+.nav_tool li a:hover {
+  color: black;
+  background-color: #edf0f1;
+}
+
+.title {
+  height: 350px;
+  background-size: 500px;
+  background-position: center bottom;
+  padding-top: 15px;
+}
+
+.title h1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.title h2 {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
 }
