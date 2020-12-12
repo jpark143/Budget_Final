@@ -57,202 +57,31 @@ header {
 }
 
 .title_head h2 {
-  font-size: 25px;
+  font-size: 30px;
   text-align: center;
   padding: 15px;
   color: #edf0f1;
 }
 
 .main {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.container1 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-  column-gap: 1rem;
-  padding: 20px;
-}
-
-.budget {
   width: 100%;
+  margin: 0 auto;
+  color: #edf0f1;
   border: 4px solid;
   border-radius: 5px;
-  color: #edf0f1;
-  padding: 1rem;
+  padding: 40px;
+  display: inline-block;
 }
 
-#form1 {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 0;
-}
-
-label {
-  font-size: 20px;
-  color: #edf0f1;
-  margin: 10px 0;
-}
-
-.textbox1 {
-  border: 2px solid green;
-  border-radius: 5px;
-  height: 2rem;
-  margin: 1rem 0;
-  width: 50%;
-}
-
-.addButton {
-  width: 15rem;
-  border: 2px solid green;
-  padding: 10px 0;
-  border-radius: 5px;
-  color: #edf0f1;
-  background-color: green;
-  cursor: pointer;
-}
-
-.addButton:hover {
-  background-color: rgb(130, 202, 120);
-}
-
-.error {
-  background-color: rgb(204, 87, 87);
-  margin: 0;
-  color: #edf0f1;
-  transform: scaleY(0);
-  height: 0;
-  transition: 0.3s;
-  transform-origin: top;
-}
-
-.error-show {
-  transform: scaleY(1);
-  height: 90%;
+ul {
+  font-size: 25px;
+  font-style: bold;
   padding: 10px;
-}
-
-.error-input {
-  border: 2px solid rgb(204, 87, 87);
-}
-
-.display {
-  width: 100%;
-  height: 200px;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  color: #edf0f1;
-  padding: 10px;
-}
-
-.display_item {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-h2 {
-  font-size: 20px;
+  margin: auto;
 }
 
 p {
-  font-size: 15px;
-  text-align: justify;
-}
-
-.money_in {
-  font-size: 3rem;
-  color: rgb(71, 182, 71);
-}
-
-.money_out {
-  font-size: 3rem;
-  color: rgb(236, 90, 90);
-}
-
-.balance {
-  font-size: 3rem;
-  color: rgb(156, 156, 236);
-}
-
-.container2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit), minmax(40rem, 1fr);
-  column-gap: 1rem;
-  padding: 20px;
-  margin: 2rem 0;
-}
-
-.output {
-  width: 100%;
-  border: 4px solid;
-  border-radius: 5px;
-  padding: 1rem;
-  color: #edf0f1;
-}
-
-#form2 {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 0;
-}
-
-.textbox2 {
-  border: 2px solid rgb(238, 81, 81);
-  border-radius: 5px;
-  height: 2rem;
-  margin: 1rem 0;
-  width: 50%;
-}
-
-.minButton {
-  width: 15rem;
-  border: 2px solid rgb(238, 81, 81);
-  padding: 10px 0;
-  border-radius: 5px;
-  color: #edf0f1;
-  background-color: rgb(238, 81, 81);
-  cursor: pointer;
-}
-.minButton:hover {
-  background-color: rgb(212, 142, 137);
-}
-
-.list {
-  width: 100%;
-  padding: 10px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-tr:nth-child(odd) {
-  background-color: rgb(160, 158, 158);
-}
-
-th,
-td {
-  width: calc(100% / 3);
-  text-align: center;
-  border: 2px solid #edf0f1;
-  padding: 0.5rem;
-}
-
-.exp_name,
-.exp_amount {
-  font-size: 15px;
-}
-
-.delete_edit {
-  cursor: pointer;
-  border: none;
-  padding: 3px;
+  font-size: 16px;
+  padding: 15px;
+  border-bottom: 1px solid #edf0f1;
 }
