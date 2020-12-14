@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name = "description" content = "personal budget">
+        <meta name = "keywords" content="personal budget, budget">
+        <title>My Budget Manager</title>
+        <link rel="stylesheet" href="home.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="./exchart.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul class="nav_tool">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/dashboard.html">Dashboard</a></li>
+                    <li><a href="/login.html">Login</a></li>
+                    <li><a href="/signup.html">Sign Up</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="title_head">
+            <h1>My Budget Manager</h1>
+            <br>
+        </div>
+
+        <div class="main">
+            <div class="text-section">
+
+                <div class="textbox">
+                    <ul class="info1">
+                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                        Visually see where you spend your money
+                    </ul>    
+                    <p>
+                        In order to save money, you need to know where and how much you are spending your money.
+                        <br>
+                        Use our dashboard tab to enter your budget and see your own budget chart!
+                        <br>
+                        You can see your own expenses with table and doughnut chart!
+                    </p>
+                </div>
+
+                <div class="textbox">
+                    <ul class="info2">
+                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                        This app is free to use
+                    </ul>    
+                    <p>
+                        If you don't have account with us, you can sign up and use our app for free! 
+                        It will save your information for later on!
+                        <br>
+                        If you already have account with us, simply log in and get start it!
+                    </p>
+                </div>
+
+                <div class="textbox">
+                    <ul class="info3">
+                        <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                        You can also track your monthly saving status
+                    </ul>
+                    <p>
+                        Add how much you saved or over spent each month!
+                        <br>
+                        It would help you to keep on track!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Here is some examples you can look at.</h2>
+        <div class="examples">
+            <h1>This is example of Doughnut Chart</h1>
+            <div style="width: 700px;">
+            <canvas id="myChart1"></canvas>
+            </div>
+            <p>With the Doughnut Chart, you can easily verify your biggest expense and smallest expense.</p>
+            <br>
+            <h1>This is example of Bar Chart</h1>
+            <div style="width: 800px;">
+            <canvas id="myChart2"></canvas>
+            </div>
+            <p>With the Bar Chart, you can easily track if you successfully saved money or over spent each Month.</p>
+        </div>
+
+    </body>
+</html>
