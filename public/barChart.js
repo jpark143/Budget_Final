@@ -51,9 +51,9 @@ function addData2(chart) {
 }
 
 function removeData2(chart) {
-    chart.data.labels.pop(document.getElementById("monthB").value);
+    chart.data.labels.pop();
     chart.data.datasets.forEach((dataset) => {
-        dataset.data.pop(document.getElementById("TB").value *1);
+        dataset.data.pop();
     });
     chart.update();
 }

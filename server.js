@@ -1,5 +1,5 @@
 const express = require('express');
-const connectDB = require('./public/database');
+const connectDB = require('./database');
 const app = express();
 
 const mongodb = require('mongodb');
@@ -10,7 +10,7 @@ const { Mongoose } = require('mongoose');
 app.use(bodyParser.json());
 
 connectDB();
-const PORT = 3000;
+const PORT = 5000;
 
 
 app.use('/', express.static('public'));
