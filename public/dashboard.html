@@ -9,8 +9,8 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <script src="./dashVal.js" defer></script>
         <script src="./barChart.js" defer></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-database.js"></script>
         <script src="./database.js"></script>
-        <script src="./userBud.js"></script>
     </head>
 
     <body>
@@ -35,8 +35,9 @@
                     <label for="">Enter Your Total Budget Amount Here</label>
                     <p>If you want to update your total budget, please re enter your new budget.</p>
                     <p class="error">Incorrect. Can not enter zero or negative number for budget</p>
+                    <input class="textbox1" type ="text" placeholder="Month" id="monthArea">
                     <input class="textbox1" type="text" id="addBudget" placeholder="Add Total budget" name="" value="">
-                    <input class="addButton" id="addButton" type="button" name="" value="Add Budget">
+                    <input class="addButton" id="addButton" type="button" name="" value="Add Budget" onclick="addData()">
                 </form>
                 <a href="/view-feedbacks"></a>
             </div>
@@ -125,6 +126,7 @@
   
     </div>
         
+
 
     </body>
 </html>
