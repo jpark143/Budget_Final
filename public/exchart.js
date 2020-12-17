@@ -40,19 +40,23 @@ var myChart2 = new Chart(cty, {
     data: {
         labels: ['Jan', 'Feb', 'March', 'April', 'May'],
         datasets: [{
-            label: 'Amount you Saved each Month',
-            data: [300, -120, 200, 50, -98],
-            backgroundColor: function(context) {
-                var index = context.dataIndex;
-                var value = context.dataset.data[index];
-                return value < 0 ? 'rgba(255, 99, 132, 0.5)' : 
-                'rgba(54, 162, 235, 0.5)'
-            },
+            label: 'Total Budget',
+            backgroundColor: 'rgba(54, 162, 235, 0.5)',
             borderColor: '#edf0f1',
-            borderWidth: 1
+            borderWidth: 1,
+            data: [3020, 3120, 3200, 3500, 3398]
+        },{
+            label: 'Total Expenses',
+            backgroundColor: 'rgba(255, 99, 132, 0.5)',
+            borderColor: '#edf0f1',
+            borderWidth: 1,
+            data: [1300, 2090, 1980, 2650, 2798]
         }]
     },
     options: {
+        tooltips:{
+            mode: 'index'
+        },
         legend:{
             labels:{
                 fontColor: '#edf0f1'

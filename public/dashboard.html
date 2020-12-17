@@ -7,7 +7,7 @@
         <title>My Budget Manager</title>
         <link rel="stylesheet" href="dashboard.css">
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-        <script src="./dash.js" defer></script>
+        <script src="./dashVal.js" defer></script>
         <script src="./barChart.js" defer></script>
     </head>
 
@@ -109,9 +109,9 @@
             <p>Add how much you saved or over spend each month</p>
             <div>
                 <label for="month">Month</label>
-                <input name="month" id="month" type="text">
+                <input name="month" id="month" type="text" placeholder="Month">
                 <label for="SO">Amount of Saved or Over</label>
-                <input name="SO" id="SO" type="number">
+                <input name="SO" id="SO" type="number" placeholder="$0">
             </div>
             <button onclick="addData2(myChart)">Add</button>
             <button onclick="removeData2(myChart)">Delete</button>
