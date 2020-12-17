@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
-//Connecting to mongodb
-mongoose.connect('mongodb://localhost/budget');
+const URI = "mongodb+srv://jae:K!llbe999@cluster0.rxovf.mongodb.net/budget_app?retryWrites=true&w=majority"
 
-mongoose.connection.once('open'.function(){
-    console.log('Connection complete')
-}).on('error'.function(error){
-    console.log('Connection error: '. error);
-});
+const connectDB = async() => {
+    await mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true });
+    console.log('database connected');
+}
+
+module.exports = connectDB;

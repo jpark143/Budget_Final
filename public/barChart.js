@@ -4,15 +4,12 @@ var myChart = new Chart(ctx, {
     data: {
         labels: [],
         datasets: [{
-            label: 'Total Budget',
-            data: [],
-            backgroundColor:'rgba(54, 162, 235, 0.5)',
-            borderColor: '#edf0f1',
-            borderWidth: 1
-        },{
-            label: 'Total Expenses',
-            data: [],
-            backgroundColor: 'rgba(255, 99, 132, 0.5)',
+            backgroundColor: function(context){
+                var i = context.dataIndex;
+                var budg = context.dataset.data[i];
+                return budg < 0 ? 'rgba(255, 99, 132, 0.5)' :
+                'rgba(54, 162, 235, 0.5)';
+            },
             borderColor: '#edf0f1',
             borderWidth: 1
         }]
@@ -34,13 +31,11 @@ var myChart = new Chart(ctx, {
                     fontColor: '#edf0f1'
                     
                 },
-                // stacked: true
             }],
             xAxes:[{
                 ticks:{
                     fontColor: '#edf0f1'
                 },
-                // stacked: true
             }]
         }
     }
@@ -50,7 +45,7 @@ var myChart = new Chart(ctx, {
 function addData2(chart) {
     chart.data.labels.push(document.getElementById("month").value);
     chart.data.datasets.forEach((dataset) => {
-        dataset.data.push(document.getElementById("TB").value * 1);
+        dataset.data.push(document.getElementById("TE").value * 1);
     });
     chart.update();
 }
@@ -62,19 +57,3 @@ function removeData2(chart) {
     });
     chart.update();
 }
-
-// function addData3(chart) {
-//     chart.data.labels.push(document.getElementById("monthE").value);
-//     chart.data.datasets.forEach((datasets2) => {
-//         datasets2.data.push(document.getElementById("TE").value * 1);
-//     });
-//     chart.update();
-// }
-
-// function removeData3(chart) {
-//     chart.data.labels.pop(document.getElementById("monthE").value);
-//     chart.data.datasets.forEach((dataset) => {
-//         dataset.data.pop(document.getElementById("TE").value *1);
-//     });
-//     chart.update();
-// }

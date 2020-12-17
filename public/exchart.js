@@ -40,17 +40,16 @@ var myChart2 = new Chart(cty, {
     data: {
         labels: ['Jan', 'Feb', 'March', 'April', 'May'],
         datasets: [{
-            label: 'Total Budget',
-            backgroundColor: 'rgba(54, 162, 235, 0.5)',
+            label: 'Current Balance at the end of the month',
+            data: [120, -150, 300, 230, -240],
+            backgroundColor: function(context){
+                var i = context.dataIndex;
+                var budg = context.dataset.data[i];
+                return budg < 0 ? 'rgba(255, 99, 132, 0.5)' :
+                'rgba(54, 162, 235, 0.5)';
+            },
             borderColor: '#edf0f1',
-            borderWidth: 1,
-            data: [3020, 3120, 3200, 3500, 3398]
-        },{
-            label: 'Total Expenses',
-            backgroundColor: 'rgba(255, 99, 132, 0.5)',
-            borderColor: '#edf0f1',
-            borderWidth: 1,
-            data: [1300, 2090, 1980, 2650, 2798]
+            borderWidth: 1
         }]
     },
     options: {

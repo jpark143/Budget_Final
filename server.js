@@ -1,12 +1,45 @@
 const express = require('express');
+const connectDB = require('./public/database');
 const app = express();
 
+const mongodb = require('mongodb');
 const bodyParser = require('body-parser');
 const path = require('path');
+const { Mongoose } = require('mongoose');
 
 app.use(bodyParser.json());
 
+connectDB();
 const PORT = 3000;
+
+
+app.use('/', express.static('public'));
+app.use('/login.html', express.static('public'));
+app.use('/signup.html', express.static('public'));
+app.use('/dashboard.html', express.static('public'));
+
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/Home.html'));
+});
+
+app.get('/login.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/login.html'));
+});
+
+app.get('/signup.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/signup.html'));
+});
+
+app.get('/dashboard.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/dashboard.html'));
+});
+
+
+app.listen(PORT, () => {
+    console.log(`Serving on port ${PORT}`);
+});
+
 
 app.post('/api//public/login', (req, res) => {
     const {username, password} = req.body;
@@ -30,35 +63,4 @@ app.post('/api//public/login', (req, res) => {
             });
         }
     }
-});
-
-app.use('/login.html', express.static('public'));
-app.use('/', express.static('public'));
-app.use('/signup.html', express.static('public'));
-app.use('/dashboard.html', express.static('public'));
-app.use('/signup.html', express.static('public'));
-
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/Home.html'));
-});
-
-app.get('/login.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/login.html'));
-});
-
-app.get('/signup.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/signup.html'));
-});
-
-app.get('/dashboard.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/dashboard.html'));
-});
-
-app.get('/signup_comp.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/signup_comp.html'));
-});
-
-app.listen(PORT, () => {
-    console.log(`Serving on port ${PORT}`);
 });

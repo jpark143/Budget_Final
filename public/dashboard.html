@@ -9,6 +9,8 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <script src="./dashVal.js" defer></script>
         <script src="./barChart.js" defer></script>
+        <script src="./database.js"></script>
+        <script src="./userBud.js"></script>
     </head>
 
     <body>
@@ -16,8 +18,7 @@
             <nav>
                 <ul class="nav_tool">
                     <li><a href="/Home.html">Home</a></li>
-                    <li><a href="/login.html">Login</a></li>
-                    <li><a href="/signup.html">Sign Up</a></li>
+                    <li><a href="/login.html">Log Out</a></li>
                 </ul>
             </nav>
         </header>
@@ -30,30 +31,34 @@
         <div class="main">
         <div class="container1">
             <div class="budget">
-                <form action="#" id="form1">
+                <form action="#" id="form1" action="/post-feedback">
                     <label for="">Enter Your Total Budget Amount Here</label>
                     <p>If you want to update your total budget, please re enter your new budget.</p>
                     <p class="error">Incorrect. Can not enter zero or negative number for budget</p>
                     <input class="textbox1" type="text" id="addBudget" placeholder="Add Total budget" name="" value="">
                     <input class="addButton" id="addButton" type="button" name="" value="Add Budget">
                 </form>
+                <a href="/view-feedbacks"></a>
             </div>
 
             <div class="display">
                 <div class="dispaly_item">
                     <h2 class="item1">Total Budget</h2>
+                    <P>This is total amount of your total budget</P>
                     <i class="fa fa-plus-circle fa-5x" style="color: rgb(71, 182, 71)" aria-hidden="true"></i>
                     <p class="money_in">$ <span id="display_input">0</span></p>
                 </div>
 
                 <div class="dispaly_item">
                     <h2 class="item1">Expenses</h2>
+                    <p>This is total amount of your total expenses</p>
                     <i class="fa fa-minus-circle fa-5x" style="color: rgb(236, 90, 90);"aria-hidden="true"></i>
                     <p class="money_out">$ <span id="display_output">0</span></p>
                 </div>
 
                 <div class="dispaly_item">
                     <h2 class="item1">Current Balance</h2>
+                    <p>This is total amount of what is left</p>
                     <i class="fa fa-university fa-5x" aria-hidden="true"></i>
                     <p class="balance">$ <span id="display_balance">0</span></p>
                 </div>
@@ -106,12 +111,12 @@
 
         <div class="container4">
             <h1>Track your monthly status with bar chart!</h1>
-            <p>Add how much you saved or over spend each month</p>
+            <p>Add your Current Balance each month to keep track how much you saved or over spend</p>
             <div>
                 <label for="month">Month</label>
                 <input name="month" id="month" type="text" placeholder="Month">
-                <label for="SO">Amount of Saved or Over</label>
-                <input name="SO" id="SO" type="number" placeholder="$0">
+                <label for="TE">Your Current Balance</label>
+                <input name="TE" id="TE" type="number" placeholder="$0">
             </div>
             <button onclick="addData2(myChart)">Add</button>
             <button onclick="removeData2(myChart)">Delete</button>
