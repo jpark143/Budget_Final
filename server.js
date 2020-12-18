@@ -2,10 +2,8 @@ const express = require('express');
 const connectDB = require('./database');
 const app = express();
 
-const mongodb = require('mongodb');
 const bodyParser = require('body-parser');
 const path = require('path');
-const { Mongoose } = require('mongoose');
 
 app.use(bodyParser.json());
 
